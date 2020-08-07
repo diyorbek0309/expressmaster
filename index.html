@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid d-flex" style="margin: 0; padding: 0">
+        <div class="sidebar d-flex flex-column justify-content-between">
+            <div class="text-center">
+                <div style="background-color: #5c5c5c">
+                <i class="far fa-comment-alt my-2"></i>
+                <br>
+                <i class="far fa-address-book mt-2"></i>
+                <span>Customers</span>
+                </div>
+                <i class="fas fa-clock clock mt-2"></i>
+                <span>Archives</span>
+                <i class="fas fa-ticket-alt mt-2"></i>
+                <span>Tickets</span>
+                <i class="fas fa-user-friends mt-2"></i>
+                <span>Agents</span>
+                <i class="fas fa-chart-line mt-2"></i>
+                <span>Reports</span>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-table"></i>
+                <span>Marketplace</span>
+                <i class="fas fa-money-check mt-2"></i>
+                <span>Upgrade</span>
+                <i class="fas fa-cog mt-2"></i>
+                <span>Settings</span>
+                <i class="fas fa-question-circle mt-2"></i><br>
+                <span>Help</span><br>
+                <i class="fas fa-user-alt mt-2"></i>
+            </div>
+        </div>
+        <div class="main" style="width: 96%">
+            <div class="notification" style="background-color: #007dff; height: 65px">
+                <div class="text-center">
+                    <h5 class="text-white pt-3 d-inline-block">Never miss a chat!</h5>
+                    <button class="btn btn-light ml-3"><i class="fa fa-bell">   Enable browser notifications</i></button>
+                    <span class="text-white p-2 right" style="font-size: 28px">X</span>
+                </div>
+            </div>
+            <div class="row m-0 p-0" style="height: 91.5%">
+                <div class="col-3 p-0" id="chats-wrap">
+                    <h4 class="p-3 m-0">Chats</h4>
+                    <hr>
+                    <i class="fa fa-angle-down p-3" style="font-size: 24px"></i><h5 class="d-inline-block">My chats</h5>
+                    <span class="p-3 right" style="font-weight: bolder">2</span>
+                    <div class="chats d-flex m-0">
+                        <img src="img/profile.jpg" alt="Profile Photo" class="w-25 p-2 m-2">
+                        <div class="pl-2 m-2">
+                            <h5>Unnamed Customer</h5>
+                            <p>Hello. How may I help you?</p>
+                        </div>
+                    </div>
+                    <div class="chats d-flex m-0 active" style="background-color: #d0e6f3">
+                        <span style="width: 4px; background-color: #007ac9"></span>
+                        <img src="img/profile.jpg" alt="Profile Photo" class="w-25 p-2 m-2">
+                        <div class="pl-2 m-2">
+                            <h5>Unnamed Customer</h5>
+                            <p>Hello. How may I help you?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 p-0" id="chat-feed">
+                        <h4 class="d-inline-block p-3 m-0">Chat feed </h4>
+                        <span class="fa fa-ellipsis-h mt-4 pr-3 right"></span>
+                    <hr>
+                    <div class="d-flex justify-content-center">
+                        <hr class="mt-4" style="border: 1px solid #eee; width: 320px">
+                        <p class="p-2">Today</p>
+                        <hr class="mt-4" style="border: 1px solid #eee; width: 320px">
+                    </div>
+                    <div class="row justify-content-end message mx-0" style="margin-bottom: 350px">
+                        <div class="d-flex">
+                            <div>
+                                <span class="right">Buying</span>
+                                <div class="p-1 mt-4" id="message">
+                                    <p class="text-white p-1 m-0">Hello. How may I help you?</p>
+                                </div>
+                                <span class="right">Delivered</span>
+                            </div>
+                            <div class="text-center right" style="width: 10%">
+                                <img src="img/profile.jpg" class="mt-4 m-2" width="40px">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="type">
+                        <textarea name="type" id="textarea" cols="95" rows="3" placeholder="Type a message..."></textarea>
+                        <div class="p-0">
+                            <p class="m-0 p-1 d-inline-block">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                Private | #  <i class="fas fa-paperclip pl-2"></i></p>
+                            <button class="btn btn-primary right" disabled>Send</button>
+                        </div>
+                    </div>
+                    <span class="text-info">+ Add tag</span>
+                </div>
+                <div class="col-3 p-0" id="details">
+                    <div id="menu" class="d-flex flex-row justify-content-between">
+                        <div class="m-0 p-0 d-flex flex-column">
+                            <i class="fa fa-user"></i>
+                            <span style="width: 100%; background-color: #007ac9; height: 4px"></span>
+                        </div>
+                        <i class="fa fa-plus"></i>
+                        <span class="align-self-end p-2" style="font-size: 32px">X</span>
+                    </div>
+                    <hr>
+                    <h4 class="d-inline-block p-2 m-0">Details</h4>
+                    <span class="fas fa-ellipsis-h mt-3 pr-3 right"></span>
+                    <div id="general-info" class="m-1">
+                        <h5>General info</h5>
+                        <div class="chats d-flex m-0 py-2">
+                            <img src="img/profile.jpg" alt="Profile Photo" class="w-25 p-1">
+                            <div class="pl-2">
+                                <h6>Unnamed Customer</h6>
+                            </div>
+                        </div>
+                        <p><i class="fas fa-clock"></i> 3:24 pm local time</p>
+                        <p><i class="fas fa-search-location"></i> Dubai, United Arab Emirates</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40053.27249054948!2d69.26531258683598!3d41.275140039732044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae6005c5142bf3%3A0xe04bf246835d2d7f!2sIslom%20Karimov%20Toshkent%20Xalqaro%20Aeroporti!5e0!3m2!1suz!2s!4v1594459914714!5m2!1suz!2s" width="330" height="180" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                    <div id="visited-pages" class="m-1">
+                        <h5>Visited pages</h5>
+                        <p class="m-0"><i class="fas fa-file pr-2"></i> Luxury Brands Online Shopping, Inter...</p>
+                        <a href="#" class="text-info">https://devsite.sololuxury.com/</a>
+                    </div>
+                    <div id="additional-info">
+                        <h5>Additional info</h5>
+                        <p>Group: General</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
